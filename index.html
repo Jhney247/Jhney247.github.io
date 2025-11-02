@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My ePortfolio - Computer Science</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 40px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section h2 {
+            color: #667eea;
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+        
+        .section p {
+            font-size: 1.1em;
+            color: #555;
+            margin-bottom: 15px;
+        }
+        
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 25px;
+        }
+        
+        .project-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 25px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-left: 4px solid #667eea;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        
+        .project-card h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.3em;
+        }
+        
+        .project-card p {
+            font-size: 1em;
+            color: #666;
+        }
+        
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .skill-tag {
+            background: #667eea;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 0.95em;
+            transition: background 0.3s;
+        }
+        
+        .skill-tag:hover {
+            background: #764ba2;
+        }
+        
+        .contact {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        
+        .contact a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: color 0.3s;
+        }
+        
+        .contact a:hover {
+            color: #764ba2;
+        }
+        
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Welcome to My ePortfolio</h1>
+            <p>Computer Science Student | Southern New Hampshire University</p>
+        </header>
+        
+        <div class="content">
+            <section class="section">
+                <h2>About Me</h2>
+                <p>I am a Computer Science student at Southern New Hampshire University, specializing in full-stack web development and software engineering. Through my coursework and projects, I have developed strong skills in building secure, efficient, and scalable applications.</p>
+                <p>This ePortfolio showcases my journey in computer science and demonstrates my ability to solve real-world problems through code.</p>
+            </section>
+            
+            <section class="section">
+                <h2>Featured Projects</h2>
+                <div class="projects">
+                    <div class="project-card">
+                        <h3>Full-Stack MEAN Application</h3>
+                        <p>CS 465: A complete travel booking application built with MongoDB, Express, Angular, and Node.js, featuring secure authentication and RESTful API design.</p>
+                    </div>
+                    
+                    <div class="project-card">
+                        <h3>Computer Graphics & Visualization</h3>
+                        <p>CS 330: Interactive 3D graphics project using C++ and OpenGL, demonstrating lighting, textures, transformations, and user interaction.</p>
+                    </div>
+                    
+                    <div class="project-card">
+                        <h3>Software Testing Portfolio</h3>
+                        <p>CS 320: Java-based contact management system with comprehensive unit testing, automation, and quality assurance practices.</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2>Technical Skills</h2>
+                <div class="skills">
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">C++</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">MongoDB</span>
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">Angular</span>
+                    <span class="skill-tag">RESTful APIs</span>
+                    <span class="skill-tag">Git/GitHub</span>
+                    <span class="skill-tag">Software Testing</span>
+                    <span class="skill-tag">Algorithm Design</span>
+                    <span class="skill-tag">Database Design</span>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2>Course Outcomes</h2>
+                <p>Through my enhancements, I demonstrate:</p>
+                <ul style="margin-left: 20px; margin-top: 15px;">
+                    <li style="margin-bottom: 10px;">Building collaborative environments and professional communication</li>
+                    <li style="margin-bottom: 10px;">Designing and evaluating computing solutions using algorithmic principles</li>
+                    <li style="margin-bottom: 10px;">Implementing innovative techniques and tools for industry-specific goals</li>
+                    <li style="margin-bottom: 10px;">Developing secure software with a security mindset</li>
+                </ul>
+            </section>
+            
+            <div class="contact">
+                <h2 style="color: #667eea; margin-bottom: 15px;">Connect With Me</h2>
+                <p>GitHub: <a href="https://github.com/Jhney247" target="_blank">github.com/Jhney247</a></p>
+            </div>
+        </div>
+        
+        <footer>
+            <p>&copy; 2024 My ePortfolio | Computer Science - SNHU</p>
+        </footer>
+    </div>
+</body>
+</html>
