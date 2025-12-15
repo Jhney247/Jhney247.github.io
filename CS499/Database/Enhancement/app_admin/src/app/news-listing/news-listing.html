@@ -1,0 +1,69 @@
+<div class="container mt-4">
+  <div class="row mb-3">
+    <div class="col-12 d-flex justify-content-between align-items-center">
+      <h2>News Articles</h2>
+      <div class="d-flex gap-2 align-items-center">
+        <input class="form-control" placeholder="Search news..." [value]="searchTerm" (input)="onSearch($any($event.target).value)" />
+        <select class="form-select" [(ngModel)]="category" (change)="updateFilters()">
+          <option value="">All Categories</option>
+          <option value="Travel Tips">Travel Tips</option>
+          <option value="Destination Guide">Destination Guide</option>
+          <option value="Company News">Company News</option>
+          <option value="Special Offers">Special Offers</option>
+          <option value="Events">Events</option>
+          <option value="General">General</option>
+        </select>
+        <select class="form-select" [(ngModel)]="featured" (change)="updateFilters()">
+          <option [ngValue]="undefined">All</option>
+          <option [ngValue]="true">Featured</option>
+          <option [ngValue]="false">Non-Featured</option>
+        </select>
+        <select class="form-select" [(ngModel)]="published" (change)="updateFilters()">
+          <option [ngValue]="true">Published</option>
+          <option [ngValue]="false">Drafts</option>
+        </select>
+        <button *ngIf="isLoggedIn()" class="btn btn-primary" (click)="addNews()">
+          <i class="bi bi-plus-circle"></i> Add New Article
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div *ngFor="let newsItem of news" class="col-md-6 mb-4">
+      <div class="card">
+        <img *ngIf="newsItem.image" [src]="getImagePath(newsItem.image)" class="card-img-top" alt="{{newsItem.title}}" (error)="$event.target.src='assets/images/reef2.jpg'">
+        <div class="card-body">
+          <div class="d-flex justify-content-between align-items-start mb-2">
+            <h5 class="card-title">{{newsItem.title}}</h5>
+            <span *ngIf="newsItem.featured" class="badge bg-warning text-dark">Featured</span>
+          </div>
+          <div class="mb-2">
+            <span class="badge bg-primary me-2">{{newsItem.category}}</span>
+            <span class="text-muted small">{{formatDate(newsItem.publishDate)}}</span>
+          </div>
+          <p class="card-text"><strong>{{newsItem.summary}}</strong></p>
+          <p class="card-text">{{newsItem.content}}</p>
+          <div *ngIf="newsItem.tags && newsItem.tags.length > 0" class="tags mb-2">
+            <span *ngFor="let tag of newsItem.tags" class="badge bg-secondary me-1">{{tag}}</span>
+          </div>
+          <p class="text-muted small">
+            <strong>Status:</strong> {{newsItem.published ? 'Published' : 'Draft'}}
+          </p>
+          <div *ngIf="isLoggedIn()" class="btn-group w-100" role="group">
+            <button class="btn btn-sm btn-outline-primary" (click)="editNews(newsItem)">Edit</button>
+            <button class="btn btn-sm btn-outline-danger" (click)="deleteNews(newsItem)">Delete</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="news.length === 0" class="alert alert-info text-center">
+    No news articles available. Click "Add New Article" to create one.
+  </div>
+
+  <div class="text-center my-3" *ngIf="hasMore">
+    <button class="btn btn-outline-secondary" (click)="loadMore()">Load More</button>
+  </div>
+</div>

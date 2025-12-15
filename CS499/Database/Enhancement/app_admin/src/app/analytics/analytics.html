@@ -1,0 +1,84 @@
+<div class="container mt-4">
+  <div class="row mb-3">
+    <div class="col-12 d-flex justify-content-between align-items-center">
+      <h2>Analytics</h2>
+      <div class="d-flex gap-2 align-items-center">
+        <input class="form-control" type="date" [(ngModel)]="startDate" />
+        <input class="form-control" type="date" [(ngModel)]="endDate" />
+        <button class="btn btn-outline-secondary" (click)="loadAll()" [disabled]="loading">Refresh</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12">
+      <h4>Trips by Resort per Month</h4>
+      <table class="table table-striped table-sm">
+        <thead>
+          <tr>
+            <th>Resort</th>
+            <th>Year</th>
+            <th>Month</th>
+            <th>Trips</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of tripsByResort">
+            <td>{{ row._id.resort }}</td>
+            <td>{{ row._id.year }}</td>
+            <td>{{ row._id.month }}</td>
+            <td>{{ row.tripCount }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="row mt-4">
+    <div class="col-12">
+      <h4>Meal Price Stats by Cuisine</h4>
+      <table class="table table-striped table-sm">
+        <thead>
+          <tr>
+            <th>Cuisine</th>
+            <th>Avg Price</th>
+            <th>Min Price</th>
+            <th>Max Price</th>
+            <th>Count</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of mealPriceStats">
+            <td>{{ row._id }}</td>
+            <td>{{ row.avgPrice | number:'1.2-2' }}</td>
+            <td>{{ row.minPrice | number:'1.2-2' }}</td>
+            <td>{{ row.maxPrice | number:'1.2-2' }}</td>
+            <td>{{ row.count }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="row mt-4">
+    <div class="col-12">
+      <h4>Room Availability by Type</h4>
+      <table class="table table-striped table-sm">
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>Available</th>
+            <th>Count</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let row of roomAvailabilityStats">
+            <td>{{ row._id.type }}</td>
+            <td>{{ row._id.available ? 'Yes' : 'No' }}</td>
+            <td>{{ row.count }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,42 @@
+<div id="background">
+    <div id="page">
+        {{> header }}
+        <div id="contents">
+            <div class="box">
+                <div>
+                    <div class="body">
+                        <h1>Meals</h1>
+                        {{#if error}}
+                        <p class="error">{{error}}</p>
+                        {{/if}}
+                        <ul id="meals">
+                            {{#each meals}}
+                            <li>
+                                <h2><a href="/meals">{{name}}</a></h2>
+                                <div class="infos">
+                                    {{#if image}}
+                                    <a href="/meals"><img src="{{image}}" alt="{{name}}" height="169" width="780"><span class="cover"></span></a>
+                                    {{else}}
+                                    <a href="/meals"><img src="/images/meal-default.jpg" alt="{{name}}" height="169" width="780"><span class="cover"></span></a>
+                                    {{/if}}
+                                </div>
+                                <p><strong>Type:</strong> {{mealType}} | <strong>Price:</strong> ${{price}}</p>
+                                <p>{{description}}</p>
+                                <div class="dietary-info">
+                                    {{#if vegetarian}}<span class="badge">Vegetarian</span>{{/if}}
+                                    {{#if vegan}}<span class="badge">Vegan</span>{{/if}}
+                                    {{#if glutenFree}}<span class="badge">Gluten-Free</span>{{/if}}
+                                </div>
+                                {{#if allergens}}
+                                <p><strong>Allergens:</strong> {{#each allergens}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}</p>
+                                {{/if}}
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{> footer }}
+</div>
