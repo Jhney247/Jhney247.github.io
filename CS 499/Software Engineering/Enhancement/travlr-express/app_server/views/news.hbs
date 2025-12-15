@@ -1,0 +1,40 @@
+<div id="background">
+    <div id="page">
+        {{> header }}
+        <div id="contents">
+            <div class="box">
+                <div>
+                    <div class="body">
+                        <h1>News</h1>
+                        {{#if error}}
+                        <p class="error">{{error}}</p>
+                        {{/if}}
+                        <ul id="news">
+                            {{#each news}}
+                            <li>
+                                <h2><a href="/news">{{title}}</a></h2>
+                                {{#if featured}}
+                                <span class="featured-badge">Featured</span>
+                                {{/if}}
+                                <div class="news-meta">
+                                    <span class="category">{{category}}</span>
+                                    <span class="date">{{publishDate}}</span>
+                                </div>
+                                {{#if image}}
+                                <a href="/news"><img src="{{image}}" alt="{{title}}" height="169" width="780"></a>
+                                {{/if}}
+                                <p class="summary">{{summary}}</p>
+                                <p>{{content}}</p>
+                                {{#if tags}}
+                                <p class="tags"><strong>Tags:</strong> {{#each tags}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}</p>
+                                {{/if}}
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{> footer }}
+</div>

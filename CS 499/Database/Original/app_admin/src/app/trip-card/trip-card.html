@@ -1,0 +1,29 @@
+<div class="card h-100 shadow-sm">
+  <img
+    [src]="getImagePath()"
+    class="card-img-top"
+    alt="{{ trip.name }}"
+    style="height: 200px; object-fit: cover;"
+    (error)="$event.target.src='assets/images/reef1.jpg'"
+  />
+  <div class="card-body d-flex flex-column">
+    <h5 class="card-title">{{ trip.name }}</h5>
+    <p class="card-text">
+      <strong>{{ trip.length }}</strong><br />
+      {{ trip.resort }}
+    </p>
+    <p class="card-text text-success fw-bold">
+      ${{ trip.perPerson }} per person
+    </p>
+    
+    <!-- Action Buttons -->
+    <div *ngIf="isLoggedIn()" class="mt-auto d-flex gap-2">
+      <button class="btn btn-sm btn-primary flex-fill" (click)="onEditTrip()">
+        <i class="bi bi-pencil"></i> Edit
+      </button>
+      <button class="btn btn-sm btn-danger flex-fill" (click)="onDeleteTrip()">
+        <i class="bi bi-trash"></i> Delete
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,73 @@
+<div class="container mt-4">
+  <h2>Add Meal</h2>
+  <form [formGroup]="addForm" (ngSubmit)="onSubmit()" class="mt-3">
+    <div class="row g-3">
+      <div class="col-md-3">
+        <label class="form-label">Code</label>
+        <input class="form-control" formControlName="code" />
+      </div>
+      <div class="col-md-5">
+        <label class="form-label">Name</label>
+        <input class="form-control" formControlName="name" />
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">Cuisine</label>
+        <input class="form-control" formControlName="cuisine" />
+      </div>
+
+      <div class="col-md-4">
+        <label class="form-label">Meal Type</label>
+        <select class="form-select" formControlName="mealType">
+          <option value="">Select...</option>
+          <option>Breakfast</option>
+          <option>Lunch</option>
+          <option>Dinner</option>
+          <option>Snack</option>
+          <option>Dessert</option>
+        </select>
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">Price</label>
+        <input class="form-control" formControlName="price" />
+      </div>
+      <div class="col-md-4">
+        <label class="form-label">Image</label>
+        <input class="form-control" formControlName="image" placeholder="e.g. images/meal1.jpg" />
+      </div>
+
+      <div class="col-12">
+        <label class="form-label">Description</label>
+        <textarea rows="3" class="form-control" formControlName="description"></textarea>
+      </div>
+
+      <div class="col-12">
+        <label class="form-label">Allergens (comma separated)</label>
+        <input class="form-control" formControlName="allergensCsv" />
+      </div>
+
+      <div class="col-12 d-flex gap-3">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" formControlName="vegetarian" id="veg" />
+          <label class="form-check-label" for="veg">Vegetarian</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" formControlName="vegan" id="vegan" />
+          <label class="form-check-label" for="vegan">Vegan</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" formControlName="glutenFree" id="gf" />
+          <label class="form-check-label" for="gf">Gluten Free</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" formControlName="available" id="avail" />
+          <label class="form-check-label" for="avail">Available</label>
+        </div>
+      </div>
+
+      <div class="col-12 d-flex gap-2 mt-3">
+        <button class="btn btn-primary" type="submit" [disabled]="addForm.invalid">Save</button>
+        <button class="btn btn-secondary" type="button" (click)="router.navigate(['meals'])">Cancel</button>
+      </div>
+    </div>
+  </form>
+</div>

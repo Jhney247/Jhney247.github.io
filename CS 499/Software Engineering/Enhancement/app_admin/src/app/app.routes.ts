@@ -1,0 +1,31 @@
+import { Routes } from '@angular/router';
+import { TripListingComponent } from './trip-listing/trip-listing';
+import { AddTripComponent } from './add-trip/add-trip';
+import { EditTripComponent } from './edit-trip/edit-trip';
+import { RoomsListingComponent } from './rooms-listing/rooms-listing';
+import { MealsListingComponent } from './meals-listing/meals-listing';
+import { NewsListingComponent } from './news-listing/news-listing';
+import { LoginComponent } from './login/login.component';
+import { AddMealComponent } from './add-meal/add-meal';
+import { EditMealComponent } from './edit-meal/edit-meal';
+import { AddRoomComponent } from './add-room/add-room';
+import { EditRoomComponent } from './edit-room/edit-room';
+import { AddNewsComponent } from './add-news/add-news';
+import { EditNewsComponent } from './edit-news/edit-news';
+
+export const routes: Routes = [
+  { path: '', component: TripListingComponent },
+  { path: 'trips', component: TripListingComponent },
+  { path: 'add-trip', component: AddTripComponent },
+  { path: 'edit-trip', component: EditTripComponent },
+  { path: 'rooms', component: RoomsListingComponent },
+  { path: 'add-room', component: AddRoomComponent },
+  { path: 'edit-room', component: EditRoomComponent },
+  { path: 'meals', component: MealsListingComponent },
+  { path: 'add-meal', component: AddMealComponent },
+  { path: 'edit-meal', component: EditMealComponent },
+  { path: 'news', component: NewsListingComponent },
+  { path: 'add-news', component: AddNewsComponent },
+  { path: 'edit-news', component: EditNewsComponent },
+  { path: 'login', component: LoginComponent }
+];

@@ -1,0 +1,41 @@
+<div id="background">
+    <div id="page">
+        {{> header }}
+        <div id="contents">
+            <div class="box">
+                <div>
+                    <div class="body">
+                        <h1>Rooms</h1>
+                        {{#if error}}
+                        <p class="error">{{error}}</p>
+                        {{/if}}
+                        <ul id="rooms">
+                            {{#each rooms}}
+                            <li>
+                                {{#if image}}
+                                <a href="/rooms"><img src="{{image}}" alt="{{type}} Room" height="169" width="780"></a>
+                                {{else}}
+                                <a href="/rooms"><img src="/images/room-default.jpg" alt="{{type}} Room" height="169" width="780"></a>
+                                {{/if}}
+                                <h2><a href="/rooms">{{type}} Room</a></h2>
+                                <div class="room-details">
+                                    <p><strong>Beds:</strong> {{beds}} | <strong>Max Occupancy:</strong> {{maxOccupancy}} guests</p>
+                                    <p><strong>Price:</strong> ${{price}}/night</p>
+                                </div>
+                                <p>{{description}}</p>
+                                {{#if amenities}}
+                                <p><strong>Amenities:</strong> {{#each amenities}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}</p>
+                                {{/if}}
+                                {{#unless available}}
+                                <p class="unavailable">Currently Unavailable</p>
+                                {{/unless}}
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{> footer }}
+</div>

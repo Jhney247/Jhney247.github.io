@@ -1,224 +1,492 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My ePortfolio - Computer Science Major</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 20px;
-        }
-        
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            overflow: hidden;
-        }
-        
-        header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 60px 40px;
-            text-align: center;
-        }
-        
-        header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
-        
-        header p {
-            font-size: 1.2em;
-            opacity: 0.9;
-        }
-        
-        .content {
-            padding: 40px;
-        }
-        
-        .section {
-            margin-bottom: 40px;
-        }
-        
-        .section h2 {
-            color: #667eea;
-            font-size: 1.8em;
-            margin-bottom: 20px;
-            border-bottom: 3px solid #667eea;
-            padding-bottom: 10px;
-        }
-        
-        .section p {
-            font-size: 1.1em;
-            color: #555;
-            margin-bottom: 15px;
-        }
-        
-        .projects {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            margin-top: 25px;
-        }
-        
-        .project-card {
-            background: #f8f9fa;
-            border-radius: 10px;
-            padding: 25px;
-            transition: transform 0.3s, box-shadow 0.3s;
-            border-left: 4px solid #667eea;
-        }
-        
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-        }
-        
-        .project-card h3 {
-            color: #667eea;
-            margin-bottom: 10px;
-            font-size: 1.3em;
-        }
-        
-        .project-card p {
-            font-size: 1em;
-            color: #666;
-        }
-        
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 20px;
-        }
-        
-        .skill-tag {
-            background: #667eea;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 25px;
-            font-size: 0.95em;
-            transition: background 0.3s;
-        }
-        
-        .skill-tag:hover {
-            background: #764ba2;
-        }
-        
-        .contact {
-            background: #f8f9fa;
-            padding: 30px;
-            border-radius: 10px;
-            text-align: center;
-        }
-        
-        .contact a {
-            color: #667eea;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1em;
-            transition: color 0.3s;
-        }
-        
-        .contact a:hover {
-            color: #764ba2;
-        }
-        
-        footer {
-            background: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 20px;
-            font-size: 0.9em;
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Professional ePortfolio — Computer Science</title>
+  <meta name="description" content="Professional ePortfolio presenting software engineering, algorithms, and database enhancements, career goals, and artifact links for final CS portfolio submission.">
+  <meta name="author" content="Student — Computer Science">
+  <link rel="canonical" href="/index.html">
+  <meta property="og:title" content="Professional ePortfolio — Computer Science">
+  <meta property="og:description" content="Software engineering, algorithms, and database enhancements demonstrating course outcomes and industry-ready skills.">
+  <meta property="og:type" content="website">
+  <meta name="robots" content="index, follow">
+
+  <style>
+    :root {
+      /* Light Theme (Default) */
+      --brand-primary: #2563eb;
+      --brand-secondary: #7c3aed;
+      --accent: #f59e0b;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --bg-body: #f1f5f9;
+      --bg-card: #ffffff;
+      --bg-panel: #ffffff;
+      --border-color: #e2e8f0;
+      --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+      --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+      --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -2px rgb(0 0 0 / 0.05);
+      --radius: 12px;
+      --header-bg: linear-gradient(135deg, #1e40af, #7c3aed);
+      --header-text: #ffffff;
+      --nav-hover: rgba(255, 255, 255, 0.15);
+      --max-w: 1200px;
+    }
+
+    .dark-mode {
+      /* Dark Theme */
+      --brand-primary: #60a5fa;
+      --brand-secondary: #a78bfa;
+      --accent: #fbbf24;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --bg-body: #0f172a;
+      --bg-card: #1e293b;
+      --bg-panel: #1e293b;
+      --border-color: #334155;
+      --header-bg: linear-gradient(135deg, #1e3a8a, #5b21b6);
+      --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+      --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.5);
+      --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.5);
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: var(--bg-body);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding: 0;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .site-wrapper {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 20px;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header */
+    header {
+      background: var(--header-bg);
+      color: var(--header-text);
+      padding: 2.5rem 2rem;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-lg);
+      margin-bottom: 2rem;
+    }
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+    .brand h1 { margin: 0; font-size: 1.8rem; font-weight: 800; letter-spacing: -0.03em; }
+    .brand p { margin: 0.5rem 0 0; opacity: 0.9; font-size: 1rem; font-weight: 400; }
+
+    nav { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+    .nav-link {
+      color: rgba(255,255,255,0.95);
+      text-decoration: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 0.2s ease;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .nav-link:hover { background: var(--nav-hover); transform: translateY(-1px); }
+    .nav-link:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+
+    #theme-toggle {
+      background: transparent;
+      border: 1px solid rgba(255,255,255,0.1);
+      cursor: pointer;
+      font-size: inherit;
+      /* Fixed to top-right of viewport on desktop */
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 1100;
+      padding: 0.5rem 0.75rem;
+      border-radius: 8px;
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+    }
+
+    /* Revert to normal flow on small screens so toggle stays inside the header/nav */
+    @media (max-width: 900px) {
+      #theme-toggle {
+        position: static;
+        right: auto;
+        top: auto;
+        z-index: auto;
+      }
+    }
+
+    /* Main Layout */
+    .container-grid {
+      display: grid;
+      grid-template-columns: 1fr 360px;
+      gap: 2rem;
+      align-items: start;
+    }
+
+    /* Panels */
+    .panel {
+      background: var(--bg-panel);
+      border-radius: var(--radius);
+      padding: 2rem;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--border-color);
+      margin-bottom: 2rem;
+    }
+
+    h2 { color: var(--brand-primary); margin-top: 0; font-size: 1.5rem; letter-spacing: -0.02em; border-bottom: 2px solid var(--border-color); padding-bottom: 0.5rem; margin-bottom: 1.5rem; }
+    h3 { color: var(--brand-secondary); margin: 1.5rem 0 0.75rem; font-size: 1.2rem; }
+    
+    .lead { font-size: 1.1rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 1.5rem; }
+    ul { padding-left: 1.2rem; color: var(--text-muted); }
+    li { margin-bottom: 0.5rem; }
+    strong { color: var(--text-main); }
+
+    /* Cards */
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--brand-primary);
+    }
+    .card h3 { margin-top: 0; color: var(--brand-primary); }
+    .meta { color: var(--text-muted); font-size: 0.9rem; }
+
+    /* Skills */
+    .skills { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+    .chip {
+      background: var(--bg-body);
+      border: 1px solid var(--border-color);
+      color: var(--text-main);
+      padding: 0.5rem 1rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: background 0.2s;
+    }
+    .chip:hover { background: var(--border-color); }
+
+    /* Buttons */
+    .read-toggle {
+      background: transparent;
+      border: 1px solid var(--brand-primary);
+      color: var(--brand-primary);
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: all 0.2s;
+      margin-top: 1rem;
+      display: inline-block;
+    }
+    .read-toggle:hover { background: var(--brand-primary); color: #fff; }
+    .read-toggle[aria-expanded="true"] { background: var(--brand-primary); color: #fff; }
+
+    a.art-link { color: var(--brand-primary); text-decoration: none; font-weight: 600; }
+    a.art-link:hover { text-decoration: underline; }
+
+    /* Footer */
+    footer {
+      margin-top: auto;
+      padding: 2rem;
+      text-align: center;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border-color);
+      background: var(--bg-panel);
+      border-radius: var(--radius);
+    }
+
+    /* Utilities */
+    .hidden { display: none; }
+    .card-body { margin-top: 1rem; border-top: 1px solid var(--border-color); padding-top: 1rem; }
+    .card-body[hidden] { display: none; }
+    .skip-link {
+      position: absolute; top: -100px; left: 1rem;
+      background: var(--brand-primary); color: white;
+      padding: 1rem; z-index: 100; border-radius: 8px;
+      font-weight: bold; text-decoration: none;
+    }
+    .skip-link:focus { top: 1rem; }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .container-grid { grid-template-columns: 1fr; }
+      .header-content { flex-direction: column; align-items: flex-start; }
+      nav { width: 100%; overflow-x: auto; padding-bottom: 5px; -webkit-overflow-scrolling: touch; }
+      .nav-link { white-space: nowrap; }
+    }
+    
+    /* Reduced Motion */
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; scroll-behavior: auto !important; }
+    }
+
+    /* Hide artifact links on desktop, expand card on hover */
+    @media (min-width: 901px) {
+      #travlr-card-body,
+      #graphics-card-body,
+      #se-card-body {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+      }
+      .card:hover #travlr-card-body,
+      .card:hover #graphics-card-body,
+      .card:hover #se-card-body {
+        max-height: 4rem;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Person",
+    "name":"Portfolio Student",
+    "jobTitle":"Aspiring IT Project Manager / Software Engineer",
+    "description":"Computer Science student showcasing software engineering, algorithms, and database enhancements aligned with course outcomes.",
+    "url":"./index.html",
+    "mainEntityOfPage":{
+      "@type":"WebPage",
+      "@id":"./index.html"
+    }
+  }
+  </script>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Welcome to My ePortfolio</h1>
-            <p>Computer Science Student | Southern New Hampshire University</p>
-        </header>
-        
-        <div class="content">
-            <section class="section">
-                <h2>About Me</h2>
-                <p>I am a Computer Science student at Southern New Hampshire University, specializing in full-stack web development and software engineering. Through my coursework and projects, I have developed strong skills in building secure, efficient, and scalable applications.</p>
-                <p>This ePortfolio showcases my journey in computer science and demonstrates my ability to solve real-world problems through code.</p>
-            </section>
-            
-            <section class="section">
-                <h2>Featured Projects</h2>
-                <div class="projects">
-                    <div class="project-card">
-                        <h3>Full-Stack MEAN Application</h3>
-                        <p>CS 465: A complete travel booking application built with MongoDB, Express, Angular, and Node.js, featuring secure authentication and RESTful API design.</p>
-                    </div>
-                    
-                    <div class="project-card">
-                        <h3>Computer Graphics & Visualization</h3>
-                        <p>CS 330: Interactive 3D graphics project using C++ and OpenGL, demonstrating lighting, textures, transformations, and user interaction.</p>
-                    </div>
-                    
-                    <div class="project-card">
-                        <h3>Software Testing Portfolio</h3>
-                        <p>CS 320: Java-based contact management system with comprehensive unit testing, automation, and quality assurance practices.</p>
-                    </div>
-                </div>
-            </section>
-            
-            <section class="section">
-                <h2>Technical Skills</h2>
-                <div class="skills">
-                    <span class="skill-tag">JavaScript</span>
-                    <span class="skill-tag">Java</span>
-                    <span class="skill-tag">C++</span>
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">MongoDB</span>
-                    <span class="skill-tag">Node.js</span>
-                    <span class="skill-tag">Angular</span>
-                    <span class="skill-tag">RESTful APIs</span>
-                    <span class="skill-tag">Git/GitHub</span>
-                    <span class="skill-tag">Software Testing</span>
-                    <span class="skill-tag">Algorithm Design</span>
-                    <span class="skill-tag">Database Design</span>
-                </div>
-            </section>
-            
-            <section class="section">
-                <h2>Course Outcomes</h2>
-                <p>Through my enhancements, I demonstrate:</p>
-                <ul style="margin-left: 20px; margin-top: 15px;">
-                    <li style="margin-bottom: 10px;">Building collaborative environments and professional communication</li>
-                    <li style="margin-bottom: 10px;">Designing and evaluating computing solutions using algorithmic principles</li>
-                    <li style="margin-bottom: 10px;">Implementing innovative techniques and tools for industry-specific goals</li>
-                    <li style="margin-bottom: 10px;">Developing secure software with a security mindset</li>
-                </ul>
-            </section>
-            
-            <div class="contact">
-                <h2 style="color: #667eea; margin-bottom: 15px;">Connect With Me</h2>
-                <p>GitHub: <a href="https://github.com/Jhney247" target="_blank">github.com/Jhney247</a></p>
-            </div>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="site-wrapper" role="main" aria-label="ePortfolio container">
+    <header>
+      <div class="header-content">
+        <div style="flex: 0 0 100%; position: relative; padding-block: 0.5rem;">
+          <button id="theme-toggle" class="nav-link" aria-label="Toggle dark mode">🌙</button>
         </div>
-        
-        <footer>
-            <p>&copy; 2024 My ePortfolio | Computer Science - SNHU</p>
-        </footer>
-    </div>
+        <div class="brand">
+          <h1>Professional ePortfolio</h1>
+          <p>Computer Science — Evidence-based artifacts & enhancements</p>
+        </div>
+        <nav aria-label="Primary Navigation">
+          <a class="nav-link" href="#self">Self-Assessment</a>
+          <a class="nav-link" href="#artifacts">Artifacts</a>
+          <a class="nav-link" href="#skills">Skills</a>
+          <a class="nav-link" href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main" class="container-grid">
+      <div class="content-area">
+        <section id="self" class="panel" aria-labelledby="self-heading">
+          <h2 id="self-heading">Professional Self-Assessment</h2>
+          <p class="lead">I am a committed Computer Science student transitioning from an IT Broadcast Technician role toward IT project management and software engineering. My portfolio centers on three major enhancements completed during coursework: a full-stack MEAN application (software engineering), a C++/OpenGL graphics engine optimization (algorithms & data structures), and a production-grade database redesign for a travel application (databases). Each enhancement demonstrates measurable improvements in architecture, performance, and security.</p>
+
+          <h3 style="margin-top:12px;">Key Competencies Demonstrated</h3>
+          <ul style="margin-left:18px">
+            <li><strong>Secure Full-Stack Development:</strong> Implemented JWT-based authentication with access/refresh tokens, bcrypt password hashing, RBAC, input sanitization, and API versioning to harden production services.</li>
+            <li><strong>Algorithmic & Performance Optimization:</strong> Introduced Octree spatial partitioning, frustum culling and LOD to minimize rendering cost, and implemented profiling to validate frame-rate improvements and draw-call reduction.</li>
+            <li><strong>Data Integrity & Scalability:</strong> Redesigned MongoDB schemas, added schema versioning, indexes, JSON schema validators, cursor-based pagination, and aggregation pipelines to support analytics and large datasets.</li>
+            <li><strong>Professional Communication:</strong> Documented changes with inline docs, OpenAPI spec, narrative artifacts, and a recorded code review to clearly communicate design decisions to technical and non-technical stakeholders.</li>
+          </ul>
+
+          <h3 style="margin-top:12px">How this aligns with Course Outcomes</h3>
+          <ul style="margin-left:18px">
+            <li><strong>Employ collaborative strategies</strong>: Through documentation, UI/UX improvements, and accessible narratives to support diverse audiences.</li>
+            <li><strong>Deliver professional communications</strong>: Every artifact includes a polished narrative and code-level commentary tailored for reviewers and employers.</li>
+            <li><strong>Design & evaluate computing solutions</strong>: Algorithmic improvements and database redesigns were selected and validated using profiling and indexing strategies.</li>
+            <li><strong>Use industry techniques & tools</strong>: MEAN stack architecture, Mongoose validation, OpenAPI, GLM, and profiling tools were applied to produce production-ready results.</li>
+            <li><strong>Adopt security mindset</strong>: Input sanitization, least-privilege roles, audit logging, and secure token practices anticipate and mitigate common threats.</li>
+          </ul>
+        </section>
+
+
+
+        <section id="artifacts" class="panel" aria-labelledby="artifacts-heading">
+          <h2 id="artifacts-heading">Artifacts</h2>
+
+          <article class="card" aria-labelledby="ae1" style="margin-bottom:12px">
+            <h3 id="ae1">Software Design & Engineering</h3>
+            <p class="meta">The artifact selected for enhancement is the CS 465 Full Stack project Travlr Express, a complete travel booking and administration platform built on the MEAN stack (MongoDB, Express, Angular, Node.js). The original application provided core CRUD operations, server-rendered public pages, and an Angular-based administration interface. It was chosen for enhancement because it spanned full-stack concerns, backend architecture, API design, authentication, frontend integration, and deployment, presenting numerous opportunities to apply professional software engineering practices.</p>
+
+            <button class="read-toggle" aria-expanded="false" aria-controls="ae1-body">Read more</button>
+            <div id="ae1-body" class="card-body" hidden>
+              <p>The enhancement focused on strengthening the application’s security posture, maintainability, and documentation. Key technical changes included implementing a robust JWT-based authentication scheme using both access and refresh tokens; secure password storage using bcrypt; and role-based access control (RBAC) to separate administrative and regular user privileges. Input validation and sanitization were standardized across routes, and consistent error handling patterns were introduced. To reduce attack surface and improve operability, CORS policies were restricted to trusted origins and rate limiting was applied to critical endpoints.</p>
+
+              <p>Architecturally, the codebase was refactored to follow an MVC pattern complemented by a service layer. This separation of concerns reduced duplicated logic, simplified unit testing, and clarified responsibilities between routing, business logic, and data persistence. Middleware was used for cross-cutting concerns (authentication, logging, validation), enabling DRY principles and easier maintenance. An OpenAPI specification was created to describe the API surface and facilitate automated documentation and client generation. JSDoc-style inline documentation and an updated README were added to support onboarding and handoff.</p>
+
+              <p>From a security and operations perspective, the project adopted least-privilege database accounts, centralized logging, and clear configuration management to reduce the risks of leaked credentials. These changes were validated through manual testing and review, with considerations for backward compatibility during incremental rollout. The process highlighted the importance of balancing security controls with usability and deployment constraints.</p>
+
+              <p>Overall, this enhancement demonstrates applied competencies in secure full-stack engineering: designing authentication and authorization workflows, applying validation and sanitization at multiple layers, refactoring for maintainability, and delivering production-oriented documentation to support stakeholders and future development.</p>
+
+              <p><a class="art-link" href="CS%20499/Database/">View artifact code and report</a></p>
+            </div>
+          </article>
+
+          <article class="card" aria-labelledby="ae2" style="margin-bottom:12px">
+            <h3 id="ae2">Algorithms & Data Structures</h3>
+            <p class="meta">The selected artifact is a CS 330 Computer Graphics and Visualization project: an interactive 3D renderer implemented in C++ and OpenGL. Computer graphics requires rigorous application of algorithms, spatial data structures, and real-time performance optimizations. The original program used brute-force rendering methods that transformed and tested every object each frame, creating a clear opportunity for algorithmic improvement and structural optimization.</p>
+
+            <button class="read-toggle" aria-expanded="false" aria-controls="ae2-body">Read more</button>
+            <div id="ae2-body" class="card-body" hidden>
+              <p>The enhancement introduced an Octree-based spatial partitioning system to divide the 3D world into recursively smaller regions, enabling efficient spatial queries and significantly reducing per-frame visibility tests. This Octree is integrated into the SceneManager and combined with frustum culling so only objects potentially visible to the camera are processed for rendering, lowering draw calls and CPU/GPU workload.</p>
+
+              <p>Additional algorithmic improvements included distance-based Level of Detail (LOD) to use simplified meshes for distant objects, and caching of transformation computations (for example, rotation matrices) to prevent redundant recalculations within the scene graph traversal. A hierarchical scene graph was introduced using parent-child node relationships to support cohesive transformations and cleaner scene organization.</p>
+
+              <p>To validate and quantify the benefit of these enhancements, a performance profiler was implemented. The profiler logs frame rate, visible object counts, draw calls, and section-level timing. These metrics were collected to demonstrate real improvements resulting from the Octree, LOD, and caching optimizations and to inform further tuning decisions.</p>
+
+              <p>Challenges included maintaining accuracy during Octree inserts/removals, ensuring consistent transformation propagation through the scene graph, and integrating LOD without visible popping artifacts. These issues were addressed through iterative testing and refinements. The work demonstrates a methodical application of algorithmic principles, thoughtful trade-offs between visual fidelity and performance, and effective communication of technical decisions to diverse audiences.</p>
+
+              <p><a class="art-link" href="CS%20499/Algorithms%20and%20Data%20Structures/">View artifact code and report</a></p>
+            </div>
+          </article>
+
+          <article class="card" aria-labelledby="ae3">
+            <h3 id="ae3">Databases</h3>
+            <p class="meta">The artifact enhanced is the database layer of the Travlr Express project. The original database design supported basic CRUD operations but lacked optimization, robust validation, and advanced data-management features. The database was chosen for enhancement because improvements here would materially increase reliability, scalability, and analytical capability across the application.</p>
+
+            <button class="read-toggle" aria-expanded="false" aria-controls="ae3-body">Read more</button>
+            <div id="ae3-body" class="card-body" hidden>
+              <p>Enhancements focused on schema redesign, query optimization, data integrity, aggregation capabilities, and database-level security. Schemas were normalized where appropriate, numeric-string fields were converted to proper numeric types, and a schemaVersion field was introduced to support future migrations and backward compatibility. Relationships between collections (Trips, Rooms, Meals, News, Users) were formalized using references, improving consistency and enabling richer analytical queries.</p>
+
+              <p>To address performance, targeted single-field and compound indexes were created based on common query patterns and profiling data. Full-text search support was strengthened for user-facing search features. Cursor-based pagination replaced offset-based techniques to provide efficient and reliable paging for large result sets.</p>
+
+              <p>Data validation was significantly improved using comprehensive Mongoose schema rules, custom business validators, and lifecycle hooks to normalize and enforce consistency. Additionally, MongoDB-level JSON schema validators were applied (via collMod) to prevent invalid documents from entering the database outside of application constraints.</p>
+
+              <p>Advanced data operations were implemented through aggregation pipelines for reporting and analytics (for example, trip distributions by resort and month, room availability trends, and pricing summaries). These pipelines were surfaced as new API endpoints and integrated into the Angular admin UI. Reusable pagination and full-text search helpers were added to the service layer to keep the code modular and maintainable.</p>
+
+              <p>Security improvements included input sanitization, enforcement of least-privilege database user roles, and a Mongoose audit-logging plugin to capture create/update/delete events for accountability. The enhancement process underscored the importance of designing indexes around actual query patterns, planning migrations carefully to maintain backward compatibility, and integrating validation at both application and database levels.</p>
+
+            <p><a class="art-link" href="CS%20499/Database/">View artifact code and report</a></p>
+          </article>
+        </section>
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="sidebar-column">
+        <div class="panel" aria-labelledby="summary-heading">
+          <h2 id="summary-heading">Featured Artifacts</h2>
+          <div>
+            <div class="projects-list">
+              <div class="card">
+                <h3>Travlr Express (MEAN)</h3>
+                <p class="meta">Secure full-stack travel booking application — authentication, API versioning, and documentation.</p>
+                <div id="travlr-card-body">
+                  <p><a class="art-link" href="CS%20499/Database/">View artifact code and report →</a></p>
+                </div>
+              </div>
+
+              <div class="card">
+                <h3>3D Graphics Engine (C++ / OpenGL)</h3>
+                <p class="meta">Octree spatial partitioning, LOD, scene graph, and performance profiling.</p>
+                <div id="graphics-card-body">
+                  <p><a class="art-link" href="CS%20499/Algorithms%20and%20Data%20Structures/">View artifact code and report →</a></p>
+                </div>
+              </div>
+
+              <div class="card">
+                <h3>Software Engineering Portfolio</h3>
+                <p class="meta">Refactored architecture and MVC patterns, middleware, and OpenAPI docs for maintainability.</p>
+                <div id="se-card-body">
+                  <p><a class="art-link" href="CS%20499/Software%20Engineering/">View artifact code and report →</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <section id="skills" class="panel" aria-labelledby="skills-heading">
+          <h2 id="skills-heading">Skills & Technical Summary</h2>
+          <p class="lead">Technical skills demonstrated across artifacts and coursework.</p>
+          <div class="skills" role="list">
+            <span class="chip" role="listitem">JavaScript / TypeScript</span>
+            <span class="chip" role="listitem">Node.js / Express</span>
+            <span class="chip" role="listitem">MongoDB / Mongoose</span>
+            <span class="chip" role="listitem">Angular</span>
+            <span class="chip" role="listitem">C++ / OpenGL</span>
+            <span class="chip" role="listitem">Algorithms & Data Structures</span>
+            <span class="chip" role="listitem">Authentication & Security</span>
+            <span class="chip" role="listitem">Performance Profiling</span>
+            <span class="chip" role="listitem">OpenAPI / Documentation</span>
+            <span class="chip" role="listitem">Accessibility (WCAG)</span>
+          </div>
+        </section>
+
+        <!-- <section id="career" class="panel" aria-labelledby="career-heading">
+          <h2 id="career-heading">Career Outlook & Professional Goals</h2>
+          <p class="lead">Transitioning from an IT Broadcast Technician toward IT Project Management and software engineering, I focus on cloud-enabled architectures and immersive technologies such as augmented reality (AR). My studies strengthened my ability to design computing solutions, document decisions for stakeholders, and apply security-first practices for modern cloud and AR workflows.</p>
+          <p class="meta">Next steps: pursue cloud certifications, continue building production-ready applications, and expand systems-level design experience while maintaining strong communication and documentation practices.</p>
+        </section> -->
+
+        <section id="contact" class="panel" aria-labelledby="contact-heading">
+          <h2 id="contact-heading">Contact & Repository</h2>
+          <p class="meta">GitHub repository for this workspace: <a class="art-link" href="https://github.com/Jhney247" target="_blank" rel="noopener">github.com/Jhney247</a></p>
+          <p class="meta">For portfolio review or hiring inquiries, use the repository link.</p>
+        </section>
+      </aside>
+    </main>
+
+    <footer>
+      <div>&copy; <span id="year"></span> Professional ePortfolio</div>
+      
+    </footer>
+  </div>
+
+  <script>
+    // small accessibility helpers and progressive View Transition microinteractions
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Smooth in-page navigation with View Transitions API where available
+    const links = document.querySelectorAll('a[href^="#"]');
+    links.forEach(a=>{
+      a.addEventListener('click', async (e)=>{
+        const href = a.getAttribute('href');
+        if(!href || href === '#') return;
+        const target = document.querySelector(href);
+        if(!target) return;
+        e.preventDefault();
+        // Prefer View Transition for smoother section changes
+        const start = ()=> window.scrollTo({top: target.getBoundingClientRect().top + window.scrollY - 12, behavior:'smooth'});
+        if(document.startViewTransition){
+          document.startViewTransition(()=> start());
+        } else { start(); }
+      });
+    });
+
+    // Ensure keyboard users land at sections and focus headings
+    links.forEach(a=>{
+      a.addEventListener('click', ()=>{
+        const href = a.getAttribute('href');
+        const el = document.querySelector(href);
+        if(el) el.setAttribute('tabindex','-1');
+      });
+    });
+
+    // Basic accessibility check: announce reduced motion preference
+    if(window.matchMedia('(prefers-reduced-motion:reduce)').matches){
+      console.log('Reduced motion preferred — animations disabled');
+    }
+  </script>
+  <script defer src="assets/main.js"></script>
 </body>
 </html>

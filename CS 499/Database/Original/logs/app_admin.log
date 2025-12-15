@@ -1,0 +1,435 @@
+nohup: ignoring input
+
+> travlr-admin@0.0.0 start
+> ng serve
+
+❯ Building...
+✔ Building...
+Initial chunk files | Names         |  Raw size
+main.js             | main          | 101.24 kB | 
+styles.css          | styles        |  10.15 kB | 
+polyfills.js        | polyfills     |  95 bytes | 
+
+                    | Initial total | 111.48 kB
+
+Application bundle generation complete. [2.713 seconds] - 2025-11-16T13:32:37.275Z
+
+Watch mode enabled. Watching for file changes...
+NOTE: Raw file sizes do not reflect development server per-request transformations.
+  ➜  Local:   http://localhost:4200/
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Initial chunk files | Names |  Raw size
+main.js             | main  | 101.54 kB | 
+
+Application bundle generation complete. [0.763 seconds] - 2025-11-16T13:49:20.215Z
+
+Page reload sent to client(s).
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Initial chunk files | Names |  Raw size
+main.js             | main  | 111.78 kB | 
+
+Application bundle generation complete. [0.384 seconds] - 2025-11-16T13:49:53.756Z
+
+Page reload sent to client(s).
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Initial chunk files | Names |  Raw size
+main.js             | main  | 111.75 kB | 
+
+Application bundle generation complete. [0.316 seconds] - 2025-11-16T13:49:58.487Z
+
+Page reload sent to client(s).
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Application bundle generation failed. [0.495 seconds] - 2025-11-16T13:51:21.879Z
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2341: Property 'router' is private and only accessible within class 'AddMealComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/add-meal/add-meal.html:10:35:
+[37m      10 │ ...utton type="button" (click)="[32mrouter[37m.navigate(['meals'])">Cancel...
+         ╵                                 [32m~~~~~~[0m
+
+  Error occurs in the template of component AddMealComponent.
+
+    src/app/add-meal/add-meal.ts:11:15:
+[37m      11 │   templateUrl: [32m'./add-meal.html'[37m
+         ╵                [32m~~~~~~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2341: Property 'router' is private and only accessible within class 'AddNewsComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/add-news/add-news.html:9:35:
+[37m      9 │ ...utton type="button" (click)="[32mrouter[37m.navigate(['news'])">Cancel</...
+        ╵                                 [32m~~~~~~[0m
+
+  Error occurs in the template of component AddNewsComponent.
+
+    src/app/add-news/add-news.ts:11:15:
+[37m      11 │   templateUrl: [32m'./add-news.html'[37m
+         ╵                [32m~~~~~~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2341: Property 'router' is private and only accessible within class 'EditMealComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/edit-meal/edit-meal.html:10:35:
+[37m      10 │ ...utton type="button" (click)="[32mrouter[37m.navigate(['meals'])">Cancel...
+         ╵                                 [32m~~~~~~[0m
+
+  Error occurs in the template of component EditMealComponent.
+
+    src/app/edit-meal/edit-meal.ts:11:15:
+[37m      11 │   templateUrl: [32m'./edit-meal.html'[37m
+         ╵                [32m~~~~~~~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2341: Property 'router' is private and only accessible within class 'EditNewsComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/edit-news/edit-news.html:9:35:
+[37m      9 │ ...utton type="button" (click)="[32mrouter[37m.navigate(['news'])">Cancel</...
+        ╵                                 [32m~~~~~~[0m
+
+  Error occurs in the template of component EditNewsComponent.
+
+    src/app/edit-news/edit-news.ts:11:15:
+[37m      11 │   templateUrl: [32m'./edit-news.html'[37m
+         ╵                [32m~~~~~~~~~~~~~~~~~~[0m
+
+
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Application bundle generation failed. [0.457 seconds] - 2025-11-16T13:51:35.008Z
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2341: Property 'router' is private and only accessible within class 'AddMealComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/add-meal/add-meal.html:10:35:
+[37m      10 │ ...utton type="button" (click)="[32mrouter[37m.navigate(['meals'])">Cancel...
+         ╵                                 [32m~~~~~~[0m
+
+  Error occurs in the template of component AddMealComponent.
+
+    src/app/add-meal/add-meal.ts:11:15:
+[37m      11 │   templateUrl: [32m'./add-meal.html'[37m
+         ╵                [32m~~~~~~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2341: Property 'router' is private and only accessible within class 'AddNewsComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/add-news/add-news.html:9:35:
+[37m      9 │ ...utton type="button" (click)="[32mrouter[37m.navigate(['news'])">Cancel</...
+        ╵                                 [32m~~~~~~[0m
+
+  Error occurs in the template of component AddNewsComponent.
+
+    src/app/add-news/add-news.ts:11:15:
+[37m      11 │   templateUrl: [32m'./add-news.html'[37m
+         ╵                [32m~~~~~~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2341: Property 'router' is private and only accessible within class 'EditMealComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/edit-meal/edit-meal.html:10:35:
+[37m      10 │ ...utton type="button" (click)="[32mrouter[37m.navigate(['meals'])">Cancel...
+         ╵                                 [32m~~~~~~[0m
+
+  Error occurs in the template of component EditMealComponent.
+
+    src/app/edit-meal/edit-meal.ts:11:15:
+[37m      11 │   templateUrl: [32m'./edit-meal.html'[37m
+         ╵                [32m~~~~~~~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2341: Property 'router' is private and only accessible within class 'EditNewsComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/edit-news/edit-news.html:9:35:
+[37m      9 │ ...utton type="button" (click)="[32mrouter[37m.navigate(['news'])">Cancel</...
+        ╵                                 [32m~~~~~~[0m
+
+  Error occurs in the template of component EditNewsComponent.
+
+    src/app/edit-news/edit-news.ts:11:15:
+[37m      11 │   templateUrl: [32m'./edit-news.html'[37m
+         ╵                [32m~~~~~~~~~~~~~~~~~~[0m
+
+
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Application bundle generation failed. [0.206 seconds] - 2025-11-16T13:51:50.751Z
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2341: Property 'router' is private and only accessible within class 'AddMealComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/add-meal/add-meal.html:10:35:
+[37m      10 │ ...utton type="button" (click)="[32mrouter[37m.navigate(['meals'])">Cancel...
+         ╵                                 [32m~~~~~~[0m
+
+  Error occurs in the template of component AddMealComponent.
+
+    src/app/add-meal/add-meal.ts:11:15:
+[37m      11 │   templateUrl: [32m'./add-meal.html'[37m
+         ╵                [32m~~~~~~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2341: Property 'router' is private and only accessible within class 'AddNewsComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/add-news/add-news.html:9:35:
+[37m      9 │ ...utton type="button" (click)="[32mrouter[37m.navigate(['news'])">Cancel</...
+        ╵                                 [32m~~~~~~[0m
+
+  Error occurs in the template of component AddNewsComponent.
+
+    src/app/add-news/add-news.ts:11:15:
+[37m      11 │   templateUrl: [32m'./add-news.html'[37m
+         ╵                [32m~~~~~~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2341: Property 'router' is private and only accessible within class 'EditMealComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/edit-meal/edit-meal.html:10:35:
+[37m      10 │ ...utton type="button" (click)="[32mrouter[37m.navigate(['meals'])">Cancel...
+         ╵                                 [32m~~~~~~[0m
+
+  Error occurs in the template of component EditMealComponent.
+
+    src/app/edit-meal/edit-meal.ts:11:15:
+[37m      11 │   templateUrl: [32m'./edit-meal.html'[37m
+         ╵                [32m~~~~~~~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2341: Property 'router' is private and only accessible within class 'EditNewsComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/edit-news/edit-news.html:9:35:
+[37m      9 │ ...utton type="button" (click)="[32mrouter[37m.navigate(['news'])">Cancel</...
+        ╵                                 [32m~~~~~~[0m
+
+  Error occurs in the template of component EditNewsComponent.
+
+    src/app/edit-news/edit-news.ts:11:15:
+[37m      11 │   templateUrl: [32m'./edit-news.html'[37m
+         ╵                [32m~~~~~~~~~~~~~~~~~~[0m
+
+
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Application bundle generation failed. [0.174 seconds] - 2025-11-16T13:51:56.893Z
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2341: Property 'router' is private and only accessible within class 'AddNewsComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/add-news/add-news.html:9:35:
+[37m      9 │ ...utton type="button" (click)="[32mrouter[37m.navigate(['news'])">Cancel</...
+        ╵                                 [32m~~~~~~[0m
+
+  Error occurs in the template of component AddNewsComponent.
+
+    src/app/add-news/add-news.ts:11:15:
+[37m      11 │   templateUrl: [32m'./add-news.html'[37m
+         ╵                [32m~~~~~~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2341: Property 'router' is private and only accessible within class 'EditMealComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/edit-meal/edit-meal.html:10:35:
+[37m      10 │ ...utton type="button" (click)="[32mrouter[37m.navigate(['meals'])">Cancel...
+         ╵                                 [32m~~~~~~[0m
+
+  Error occurs in the template of component EditMealComponent.
+
+    src/app/edit-meal/edit-meal.ts:11:15:
+[37m      11 │   templateUrl: [32m'./edit-meal.html'[37m
+         ╵                [32m~~~~~~~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2341: Property 'router' is private and only accessible within class 'EditNewsComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/edit-news/edit-news.html:9:35:
+[37m      9 │ ...utton type="button" (click)="[32mrouter[37m.navigate(['news'])">Cancel</...
+        ╵                                 [32m~~~~~~[0m
+
+  Error occurs in the template of component EditNewsComponent.
+
+    src/app/edit-news/edit-news.ts:11:15:
+[37m      11 │   templateUrl: [32m'./edit-news.html'[37m
+         ╵                [32m~~~~~~~~~~~~~~~~~~[0m
+
+
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Application bundle generation failed. [0.203 seconds] - 2025-11-16T13:52:01.664Z
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2341: Property 'router' is private and only accessible within class 'AddNewsComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/add-news/add-news.html:9:35:
+[37m      9 │ ...utton type="button" (click)="[32mrouter[37m.navigate(['news'])">Cancel</...
+        ╵                                 [32m~~~~~~[0m
+
+  Error occurs in the template of component AddNewsComponent.
+
+    src/app/add-news/add-news.ts:11:15:
+[37m      11 │   templateUrl: [32m'./add-news.html'[37m
+         ╵                [32m~~~~~~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'cancel' does not exist on type 'EditMealComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/edit-meal/edit-meal.html:10:35:
+[37m      10 │     <button type="button" (click)="[32mcancel[37m()">Cancel</button>
+         ╵                                    [32m~~~~~~[0m
+
+  Error occurs in the template of component EditMealComponent.
+
+    src/app/edit-meal/edit-meal.ts:11:15:
+[37m      11 │   templateUrl: [32m'./edit-meal.html'[37m
+         ╵                [32m~~~~~~~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2341: Property 'router' is private and only accessible within class 'EditNewsComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/edit-news/edit-news.html:9:35:
+[37m      9 │ ...utton type="button" (click)="[32mrouter[37m.navigate(['news'])">Cancel</...
+        ╵                                 [32m~~~~~~[0m
+
+  Error occurs in the template of component EditNewsComponent.
+
+    src/app/edit-news/edit-news.ts:11:15:
+[37m      11 │   templateUrl: [32m'./edit-news.html'[37m
+         ╵                [32m~~~~~~~~~~~~~~~~~~[0m
+
+
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Application bundle generation failed. [0.180 seconds] - 2025-11-16T13:52:07.816Z
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2341: Property 'router' is private and only accessible within class 'AddNewsComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/add-news/add-news.html:9:35:
+[37m      9 │ ...utton type="button" (click)="[32mrouter[37m.navigate(['news'])">Cancel</...
+        ╵                                 [32m~~~~~~[0m
+
+  Error occurs in the template of component AddNewsComponent.
+
+    src/app/add-news/add-news.ts:11:15:
+[37m      11 │   templateUrl: [32m'./add-news.html'[37m
+         ╵                [32m~~~~~~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2341: Property 'router' is private and only accessible within class 'EditNewsComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/edit-news/edit-news.html:9:35:
+[37m      9 │ ...utton type="button" (click)="[32mrouter[37m.navigate(['news'])">Cancel</...
+        ╵                                 [32m~~~~~~[0m
+
+  Error occurs in the template of component EditNewsComponent.
+
+    src/app/edit-news/edit-news.ts:11:15:
+[37m      11 │   templateUrl: [32m'./edit-news.html'[37m
+         ╵                [32m~~~~~~~~~~~~~~~~~~[0m
+
+
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Application bundle generation failed. [0.163 seconds] - 2025-11-16T13:52:13.911Z
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2341: Property 'router' is private and only accessible within class 'AddNewsComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/add-news/add-news.html:9:35:
+[37m      9 │ ...utton type="button" (click)="[32mrouter[37m.navigate(['news'])">Cancel</...
+        ╵                                 [32m~~~~~~[0m
+
+  Error occurs in the template of component AddNewsComponent.
+
+    src/app/add-news/add-news.ts:11:15:
+[37m      11 │   templateUrl: [32m'./add-news.html'[37m
+         ╵                [32m~~~~~~~~~~~~~~~~~[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2341: Property 'router' is private and only accessible within class 'EditNewsComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/edit-news/edit-news.html:9:35:
+[37m      9 │ ...utton type="button" (click)="[32mrouter[37m.navigate(['news'])">Cancel</...
+        ╵                                 [32m~~~~~~[0m
+
+  Error occurs in the template of component EditNewsComponent.
+
+    src/app/edit-news/edit-news.ts:11:15:
+[37m      11 │   templateUrl: [32m'./edit-news.html'[37m
+         ╵                [32m~~~~~~~~~~~~~~~~~~[0m
+
+
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Application bundle generation failed. [0.159 seconds] - 2025-11-16T13:52:19.573Z
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2341: Property 'router' is private and only accessible within class 'EditNewsComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/edit-news/edit-news.html:9:35:
+[37m      9 │ ...utton type="button" (click)="[32mrouter[37m.navigate(['news'])">Cancel</...
+        ╵                                 [32m~~~~~~[0m
+
+  Error occurs in the template of component EditNewsComponent.
+
+    src/app/edit-news/edit-news.ts:11:15:
+[37m      11 │   templateUrl: [32m'./edit-news.html'[37m
+         ╵                [32m~~~~~~~~~~~~~~~~~~[0m
+
+
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Application bundle generation failed. [0.167 seconds] - 2025-11-16T13:52:25.749Z
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mTS2339: Property 'cancel' does not exist on type 'EditNewsComponent'.[0m [1m[35m[plugin angular-compiler][0m
+
+    src/app/edit-news/edit-news.html:9:35:
+[37m      9 │     <button type="button" (click)="[32mcancel[37m()">Cancel</button>
+        ╵                                    [32m~~~~~~[0m
+
+  Error occurs in the template of component EditNewsComponent.
+
+    src/app/edit-news/edit-news.ts:11:15:
+[37m      11 │   templateUrl: [32m'./edit-news.html'[37m
+         ╵                [32m~~~~~~~~~~~~~~~~~~[0m
+
+
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Initial chunk files | Names         |  Raw size
+main.js             | main          | 155.24 kB | 
+styles.css          | styles        |  10.15 kB | 
+polyfills.js        | polyfills     |  95 bytes | 
+
+                    | Initial total | 165.48 kB
+
+Application bundle generation complete. [0.182 seconds] - 2025-11-16T13:52:32.284Z
+
+Page reload sent to client(s).
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Initial chunk files | Names |  Raw size
+main.js             | main  | 155.35 kB | 
+
+Application bundle generation complete. [0.298 seconds] - 2025-11-16T13:58:25.152Z
+
+Page reload sent to client(s).
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Initial chunk files | Names |  Raw size
+main.js             | main  | 155.51 kB | 
+
+Application bundle generation complete. [0.383 seconds] - 2025-11-16T13:58:33.512Z
+
+Page reload sent to client(s).
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Initial chunk files | Names |  Raw size
+main.js             | main  | 155.47 kB | 
+
+Application bundle generation complete. [0.182 seconds] - 2025-11-16T13:58:42.603Z
+
+Page reload sent to client(s).
+❯ Changes detected. Rebuilding...
+✔ Changes detected. Rebuilding...
+Initial chunk files | Names |  Raw size
+main.js             | main  | 155.43 kB | 
+
+Application bundle generation complete. [0.163 seconds] - 2025-11-16T13:58:47.834Z
+
+Page reload sent to client(s).
